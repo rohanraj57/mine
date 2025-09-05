@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Question</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    let clickCount = 0;
+    function moveButton(btn) {
+      clickCount++;
+      if (clickCount < 4) {
+        const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+        const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+        btn.style.position = "absolute";
+        btn.style.left = `${x}px`;
+        btn.style.top = `${y}px`;
+      } else {
+        window.location.href = 'special_message.html';
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <div class="container">
+    <h1>Will uh wanna be My life partner?</h1>
+   <p>
+   I know this very early for deciding this, but I just wanna know your feelings about me, and I hope you will answer me honestly. I love you so much, and I want to spend my whole life with you. So, Will you be my Forever ,will you be my life partner?
+
+    <button onclick="moveButton(this)">Yes, I Do!</button>
+  </div>
+  <script src="particles-config.js"></script>
+</body>
+</html>
